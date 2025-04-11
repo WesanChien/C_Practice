@@ -8,17 +8,17 @@ int main() {
         int input;
         scanf("%d", &input);
         if(input == 0) break;
-        int *arr = (int *)malloc(sizeof(int) * (length + 1)); //ä¸ç”¨mallocçš„è©±ï¼Œåˆ°whileçš„}æ™‚å€™ï¼Œ*numæœƒè¢«freeæ‰
+        /*int *arr = (int *)malloc(sizeof(int) * (length + 1)); 
         for(int i = 0; i < length; i++) {
             arr[i] = num[i];
         }
         free(num);
-        num = arr;
-        // num = realloc(num, sizeof(int) * (length + 1));// reallocå¯å–ä»£ä¸Šé¢
+        num = arr;*/
+        num = realloc(num, sizeof(int) * (length + 1));// realloc¥i¨ú¥N¤W­±4¦æ
         num[length] = input;
         length++;
     }
-    printf("You've entered: ");
+    printf("§A¿é¤J¤F: ");
     for(int i = 0; i < length; i++) {
         printf("%d ", num[i]);
     }
