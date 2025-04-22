@@ -15,7 +15,7 @@ void print2(int (*N)[3]) {
     printf("\n");
 }//比較不喜歡這個
 
-void print3(int (*N)[3], int h) {
+void print3(int (*N)[3], int h) {//陣列指標
     for (int i = 0; i < h; i++) {
         for (int j = 0; j < 3; j++) {
             printf("%d ", N[i][j]);
