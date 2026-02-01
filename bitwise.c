@@ -24,9 +24,10 @@ void q3(uint32_t x){ // (a) 取出 bit 0 (b) 取出 bit 7
     printf("bit0 is %d, bit7 is %d\n", bit0, bit7);
 }
 
-// uint32_t extract_bits(uint32_t y, int pos, int len){
-    
-// }
+void set_bits_12to15(uint32_t value, uint32_t bits){ // 先清 12~15 成 0，再跟 bits 做 OR
+    if(bits & 0xFFFFFFF0) errexit();
+    return (value & ~(0xFu << 12)) | (bits << 12);
+}
 
 int main() {
     uint32_t x = 0x85; // 1000 0101
